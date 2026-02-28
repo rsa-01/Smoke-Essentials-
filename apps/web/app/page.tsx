@@ -183,7 +183,7 @@ export default function HomePage() {
 
           {/* CTA Buttons */}
           <ScrollReveal delay={0.5}>
-            <div style={{ display: 'flex', gap: 16, marginTop: 40, alignItems: 'center' }}>
+            <div className="hero-cta-row" style={{ display: 'flex', gap: 16, marginTop: 40, alignItems: 'center' }}>
               <Link href="/shop" className="btn-ember" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                 Order Now <span style={{ fontSize: 18 }}>→</span>
               </Link>

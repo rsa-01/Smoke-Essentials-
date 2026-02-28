@@ -523,19 +523,35 @@ select option {
 
 @media (max-width: 768px) {
   .text-display {
-    font-size: clamp(2.2rem, 10vw, 3.5rem);
+    font-size: clamp(1.8rem, 8vw, 2.8rem) !important;
   }
 
   .hero-content {
     padding: 100px 20px 40px !important;
   }
 
+  /* Push video fully behind content, heavily faded */
   .hero-video-container {
     width: 100% !important;
     right: 0 !important;
-    opacity: 0.5 !important;
-    mask-image: linear-gradient(to bottom, black 40%, transparent 100%) !important;
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%) !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    opacity: 0.2 !important;
+    z-index: 1 !important;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 20%, transparent 80%) !important;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 20%, transparent 80%) !important;
+  }
+
+  .hero-cta-row {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  .hero-cta-row a,
+  .hero-cta-row button {
+    text-align: center !important;
+    justify-content: center !important;
   }
 
   .grid-3,
@@ -563,8 +579,17 @@ select option {
   }
 
   .stats-container {
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 24px !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    max-width: 100% !important;
+  }
+
+  .stats-container>div {
+    flex: 1 1 80px;
+    min-width: 80px;
+    text-align: center;
   }
 
   .shop-sidebar {
