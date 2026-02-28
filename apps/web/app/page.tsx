@@ -17,7 +17,7 @@ import {
 
 
 const HeroScene = dynamic(() => import('../components/HeroScene'), { ssr: false });
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+const API = '/api';
 
 export default function HomePage() {
   const [products, setProducts] = useState<any[]>([]);

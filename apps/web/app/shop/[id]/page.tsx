@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import ProductCard from '../../../components/ProductCard';
 import { useCartStore } from '../../../store/cart';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+const API = '/api';
 
 export default function ProductDetailPage() {
     const params = useParams();

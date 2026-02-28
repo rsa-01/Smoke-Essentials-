@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import ProductCard from '../../components/ProductCard';
 
 const categories = ['ALL', 'CIGARETTE', 'CONDOM', 'COMBO', 'OTHER'];
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+const API = '/api';
 
 function ShopContent() {
     const searchParams = useSearchParams();
