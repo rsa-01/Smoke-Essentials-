@@ -8,6 +8,12 @@
             "dependsOn": [
                 "^build"
             ],
+            "env": [
+                "DATABASE_URL",
+                "JWT_SECRET",
+                "JWT_REFRESH_SECRET",
+                "NEXT_PUBLIC_API_URL"
+            ],
             "outputs": [
                 ".next/**",
                 "!.next/cache/**",
