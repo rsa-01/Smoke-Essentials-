@@ -85,9 +85,10 @@ export async function POST(req: NextRequest) {
         }, { status: 201 });
     } catch (error) {
         if (error instanceof z.ZodError) {
+            const errorMessage = error.errors.map(err => err.message).join(', ');
             return NextResponse.json({
                 success: false,
-                error: 'Validation failed',
+                error: errorMessage || 'Validation failed',
                 details: error.errors,
             }, { status: 400 });
         }
