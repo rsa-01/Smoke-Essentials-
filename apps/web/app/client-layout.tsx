@@ -9,15 +9,17 @@ import { ScrollProgress } from '../components/ScrollAnimations';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
     return (
-        <SmoothScroll>
+        <>
             <AgeGate />
-            <ScrollProgress />
-            <Header />
-            <main style={{ minHeight: 'calc(100vh - 64px)' }}>
-                {children}
-            </main>
-            <Footer />
-            <CartDrawer />
-        </SmoothScroll>
+            <SmoothScroll>
+                <ScrollProgress />
+                <Header />
+                <main style={{ minHeight: 'calc(100vh - 64px)' }}>
+                    {children}
+                </main>
+                <Footer />
+                <CartDrawer />
+            </SmoothScroll>
+        </>
     );
 }
